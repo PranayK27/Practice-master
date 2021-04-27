@@ -1,7 +1,5 @@
 package Collections.List;
 
-import java.util.LinkedList;
-
 public class LinkedListTrial {
     public static void main(String[] args) {
         java.util.LinkedList<String> linkedList = new java.util.LinkedList<>();
