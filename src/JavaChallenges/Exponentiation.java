@@ -1,6 +1,5 @@
 package JavaChallenges;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.Scanner;
 import java.util.function.BiFunction;
