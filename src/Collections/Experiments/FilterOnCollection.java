@@ -1,8 +1,5 @@
 package Collections.Experiments;
 
-import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.collections4.Predicate;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,12 +13,6 @@ public class FilterOnCollection {
 
         shortNamesList.addAll(namesList);
 
-//        CollectionUtils.filter(shortNamesList, new Predicate<Object>() {
-//            @Override
-//            public boolean evaluate(Object input) {
-//                return ((String) input).length()<5;
-//            }
-//        });
         System.out.println(shortNamesList);
 
         //Java 8 implementation of the Predicate
@@ -31,7 +22,6 @@ public class FilterOnCollection {
                 .collect(Collectors.toList());
         System.out.println(shortNamesList);
 
-        System.out.println(shortNamesList);
 
     }
 }

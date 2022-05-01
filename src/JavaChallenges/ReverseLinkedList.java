@@ -64,5 +64,8 @@ public class ReverseLinkedList {
         linkedList.add(40);
 
         System.out.println(linkedList);
+
+        linkedList.reverse();
+        System.out.println(linkedList);
     }
 }

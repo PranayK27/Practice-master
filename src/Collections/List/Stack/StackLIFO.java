@@ -9,7 +9,7 @@ public class StackLIFO {
         s.push("A");
         s.push("B");
         s.push("C");
-        System.out.print("Next: "+ s.peek());
+        System.out.println("Next: "+ s.peek());
         s.push("D");
         System.out.println(s.pop());
         s.push("E");

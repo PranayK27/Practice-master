@@ -12,6 +12,6 @@ public class ArraytoList {
         for (int i: intArray){
             intList.add(i);
         }
-        System.out.println(intList);
+        System.out.print(intList);
     }
 }
