@@ -1,51 +1,36 @@
 package JavaChallenges;
 
-
-
-import java.util.Scanner;
-
-class Sorting{
-    public int[] bubbleSort(int[] numbers){
-        if (numbers == null)
-            return numbers;
-
-        boolean numberSwapped;
-
-        do {
-            numberSwapped = false;
-            for (int i=0; i < numbers.length; i++){
-                if (numbers[i] > numbers[i+1]){
-                    int aux = numbers[i+1];
-                    numbers[i+1] = numbers[i];
-                    numbers[i] = aux;
-                    numberSwapped = true;
+// Java program for implementation of Bubble Sort
+class BubbleSort {
+    void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (arr[j] > arr[j + 1]) {
+                    // swap arr[j+1] and arr[j]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
-            }
-        } while (numberSwapped);
-        return numbers;
     }
-}
-public class BubbleSort {
-    public static void main(String args[]){
 
-        Sorting sorting = new Sorting();
+    /* Prints the array */
+    void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
 
-//        int count;
-//        Scanner scan = new Scanner(System.in);
-//        System.out.print("Enter number of elements you want in the array: ");
-//        count = scan.nextInt();
-//
-//        int num[] = new int[count];
-//        System.out.println("Enter array elements:");
-//
-//        for (int i = 0; i < count; i++)
-//        {
-//            num[i] = scan.nextInt();
-//        }
-//        scan.close();
-//
-//        int[] array = {10, 30, 40, 20};
-
-       // System.out.println(sorting.bubbleSort(num));
+    // Driver method to test above
+    public static void main(String args[])
+    {
+        BubbleSort ob = new BubbleSort();
+        int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+        ob.bubbleSort(arr);
+        System.out.println("Sorted array");
+        ob.printArray(arr);
     }
 }
