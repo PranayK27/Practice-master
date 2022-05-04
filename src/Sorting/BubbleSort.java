@@ -33,7 +33,7 @@ public class BubbleSort {
     {
         BubbleSort ob = new BubbleSort();
         int arr[] = {6, 4, 5, 12, 2, 11, 9};
-        bubbleSort(arr, arr.length);
+        bubbleSort(arr, arr.length); //static method above
         ob.display(arr);
     }
 }

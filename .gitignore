@@ -1,2 +1,10 @@
 # Project exclude paths
 /out/
+/build/
+/nbproject/
+.DS_Store
+.idea/sonarlint/
+src/.DS_Store
+src/Java8/.DS_Store
+.idea/misc.xml
+.idea
