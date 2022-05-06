@@ -1,4 +1,4 @@
-package JavaChallenges;
+package Prerparation;
 
 /**
  * Here we have a stream instead of whole array and we are allowed to store only k elements.
@@ -17,7 +17,6 @@ package JavaChallenges;
  */
 
 // Java program for the above approach
-import java.io.*;
 import java.util.*;
 
 class KthElementInNumberStream {
@@ -35,7 +34,7 @@ class KthElementInNumberStream {
     static PriorityQueue<Integer> min;
     static int k;
 
-    static List<Integer> getAllKthNumber(int arr[])
+    static List<Integer> getAllKthNumber(int[] arr)
     {
 
         // list to store kth largest number
@@ -88,12 +87,12 @@ class KthElementInNumberStream {
 
         k = 4;
 
-        int arr[] = { 1, 2, 3, 4, 5, 6 };
+        int[] arr = { 1, 2, 3, 4, 5, 6 };
 
         List<Integer> res = getAllKthNumber(arr);
 
         for (int x : res)
-            System.out.print(x + " ");
+           System.out.print(x + " ");
     }
 }
 
