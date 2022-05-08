@@ -9,7 +9,7 @@ class BalancedParenthesis {
     // balanced parentheses
     // open store the count of opening parenthesis
     // close store the count of closing parenthesis
-    static void _printParenthesis(char str[], int pos,
+    static void _printParenthesis(char[] str, int pos,
                                   int n, int open,
                                   int close)
     {
@@ -50,5 +50,3 @@ class BalancedParenthesis {
         printParenthesis(str, n);
     }
 }
-
-// Contributed by Pramod Kumar

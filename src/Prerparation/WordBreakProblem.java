@@ -63,5 +63,4 @@ public class WordBreakProblem
     }
 }
 
-// This code is contributed by Sparsh Singhal
 

@@ -6,7 +6,7 @@ class KClosest
     /* Function to find the cross over point (the point before
     which elements are smaller than or equal to x and after
     which greater than x)*/
-    int findCrossOver(int arr[], int low, int high, int x)
+    int findCrossOver(int[] arr, int low, int high, int x)
     {
         // Base cases
         if (arr[high] <= x) // x is greater than all
@@ -31,7 +31,7 @@ class KClosest
 
     // This function prints k closest elements to x in arr[].
     // n is the number of elements in arr[]
-    void printKclosest(int arr[], int x, int k, int n)
+    void printKclosest(int[] arr, int x, int k, int n)
     {
         // Find the crossover point
         int l = findCrossOver(arr, 0, n-1, x);
@@ -73,16 +73,15 @@ class KClosest
     }
 
     /* Driver program to check above functions */
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         KClosest ob = new KClosest();
-        int arr[] = {12, 16, 22, 30, 35, 39, 42,
+        int[] arr = {12, 16, 22, 30, 35, 39, 42,
                 45, 48, 50, 53, 55, 56
         };
         int n = arr.length;
         int x = 35, k = 4;
-        ob.printKclosest(arr, x, 4, n);
+        ob.printKclosest(arr, x, k, n);
     }
 }
-/* This code is contributed by Rajat Mishra */
 

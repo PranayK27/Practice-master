@@ -77,5 +77,3 @@ class Interval
         this.end=end;
     }
 }
-// This code is contributed by Gaurav Tiwari
-

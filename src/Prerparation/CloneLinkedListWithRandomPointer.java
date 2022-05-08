@@ -106,5 +106,3 @@ class CloneLinkedListWithRandomPointer {
         print(cloned_list);
     }
 }
-
-// This code is contributed by Prerna Saini.

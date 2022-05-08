@@ -3,7 +3,7 @@ package Prerparation;
 // A complete working Java program
 // to demonstrate deletion
 // in singly linked list
-class LinkedList {
+class DeleteNodeWithAKey { //using Linkedlist
     Node head; // head of list
 
     /* Linked list Node*/
@@ -70,7 +70,7 @@ class LinkedList {
     here to keep code compact */
     public static void main(String[] args)
     {
-        LinkedList llist = new LinkedList();
+        DeleteNodeWithAKey llist = new DeleteNodeWithAKey();
 
         llist.push(7);
         llist.push(1);

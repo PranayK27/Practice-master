@@ -1,16 +1,13 @@
 package Prerparation;
 
 // Java program to find missing Number
-import java.util.*;
-        import java.util.Arrays;
 class FindTheMissingNumber {
     public static int
     findDisappearedNumbers(int[] nums)
     {
         int n=nums.length;
         int sum=((n+1)*(n+2))/2;
-        for(int i=0;i<n;i++)
-            sum-=nums[i];
+        for (int num : nums) sum -= num;
         return sum;
     }
     public static void main(String[] args)

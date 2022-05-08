@@ -20,7 +20,7 @@ class Node2 {
 
 class BinaryTreePathSum {
 
-    Node root;
+    Node2 root;
 
 	/*
 	Given a tree and a sum,
@@ -36,7 +36,7 @@ class BinaryTreePathSum {
 	see if the sum is 0 you reach the leaf node.
 	*/
 
-    boolean hasPathSum(Node node, int sum)
+    boolean hasPathSum(Node2 node, int sum)
     {
         boolean ans = false;
         int subSum = sum - node.data;
@@ -68,12 +68,12 @@ class BinaryTreePathSum {
 		3 5 2
 		*/
         BinaryTreePathSum tree = new BinaryTreePathSum();
-        tree.root = new Node(10);
-        tree.root.left = new Node(8);
-        tree.root.right = new Node(2);
-        tree.root.left.left = new Node(3);
-        tree.root.left.right = new Node(5);
-        tree.root.right.left = new Node(2);
+        tree.root = new Node2(10);
+        tree.root.left = new Node2(8);
+        tree.root.right = new Node2(2);
+        tree.root.left.left = new Node2(3);
+        tree.root.left.right = new Node2(5);
+        tree.root.right.left = new Node2(2);
 
         if (tree.hasPathSum(tree.root, sum))
             System.out.println(
@@ -86,6 +86,4 @@ class BinaryTreePathSum {
     }
 }
 
-// This code has been contributed by Mayank
-// Jaiswal(mayank_24)
 
