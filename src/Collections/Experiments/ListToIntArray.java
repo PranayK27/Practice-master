@@ -18,6 +18,14 @@ public class ListToIntArray {
             intArray[i] = list.get(i);
             System.out.print(intArray[i]+" ");
         }
+        System.out.println();
+        //convert array to list
+        List<Integer> myList = new ArrayList<>();
+        for (int i: intArray){
+            myList.add(i);
+        }
 
+        System.out.println("Printing the list:");
+        System.out.println(myList);
     }
 }
