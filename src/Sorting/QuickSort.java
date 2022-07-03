@@ -39,8 +39,8 @@ public class QuickSort {
 
         BaseForQuickSort base = new BaseForQuickSort();
         base.quickSort(arr, 0, arr.length-1);
-        for (int i=0; i< arr.length; i++){
-            System.out.print(" " + arr[i]);
+        for (int j : arr) {
+            System.out.print(" " + j);
         }
     }
 }

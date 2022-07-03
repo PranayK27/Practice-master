@@ -1,7 +1,7 @@
 package Sorting;
 
 public class MergeSort {
-    void merge(int arr[], int left, int middle, int right)
+    void merge(int[] arr, int left, int middle, int right)
     {
         int low = middle - left + 1;                    //size of the left subarray
         int high = right - middle;                      //size of the right subarray
@@ -56,7 +56,7 @@ public class MergeSort {
     }
 
 
-    void mergeSort(int arr[], int left, int right)       //helper function that creates the sub cases for sorting
+    void mergeSort(int[] arr, int left, int right)       //helper function that creates the sub cases for sorting
     {
         int middle;
         if (left < right) {                             //sort only if the left index is lesser than the right index (meaning that sorting is done)
@@ -69,17 +69,16 @@ public class MergeSort {
         }
     }
 
-    void display(int arr[])                 //display the array
+    void display(int[] arr)                 //display the array
     {
-        for (int i=0; i<arr.length; ++i)
-        {
-            System.out.print(arr[i]+" ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        int arr[] = { 9, 3, 1, 5, 13, 12 };
+        int[] arr = { 9, 3, 1, 5, 13, 12 };
         MergeSort ob = new MergeSort();
         ob.mergeSort(arr, 0, arr.length - 1);
         ob.display(arr);

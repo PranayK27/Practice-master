@@ -1,7 +1,7 @@
 package Sorting;
 
 public class InsertionSort {
-    static void insertionSort(int arr[], int n)
+    static void insertionSort(int[] arr, int n)
     {
         if (n <= 1)                             //passes are done
         {

@@ -1,7 +1,7 @@
 package Sorting;
 
 public class BubbleSort {
-    static void bubbleSort(int arr[], int n)
+    static void bubbleSort(int[] arr, int n)
     {
         if (n == 1)                     //passes are done
         {
