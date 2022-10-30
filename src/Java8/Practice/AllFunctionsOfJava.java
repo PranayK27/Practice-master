@@ -6,15 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.groupingBy;
+
 public class AllFunctionsOfJava {
     public static void main(String[] args) {
 
         List<Product> products = new ArrayList();
-        products.add(new Product("p1", "Oneplus Nord N100", 150, 2, "Manufacturer 1"));
-        products.add(new Product("p2", "Apple Iphone 11 Pro", 1179, 4, "Manufacturer 1"));
-        products.add(new Product("p3", "Apple Macbook Pro M2", 1629, 6, "Manufacturer 2"));
-        products.add(new Product("p4", "Apple Macbook Air", 600, 9, "Manufacturer 2"));
-        products.add(new Product("p5", "Acer i5", 550, 5, "Manufacturer 2"));
+        products.add(new Product("p1", "Nord N100", 150, 2, "Oneplus"));
+        products.add(new Product("p2", "Iphone 11 Pro", 1179, 4, "Apple"));
+        products.add(new Product("p3", "Macbook Pro M2", 1629, 6, "Apple"));
+        products.add(new Product("p4", "Macbook Air", 600, 9, "Apple"));
+        products.add(new Product("p5", "Aspire E5", 550, 5, "Acer"));
 
         List<String> names = Arrays.asList("R", "G", "N", "K", "B", "x");
 
@@ -204,24 +206,24 @@ public class AllFunctionsOfJava {
         mapLong()
        */
 
-        int total = numbers.stream().mapToInt(n -> n).sum();
-        System.out.println("total: "+total);
-
-        OptionalInt min = numbers.stream().mapToInt(n -> n).min();
-        System.out.println("min: "+min);
-
-        OptionalInt max = numbers.stream().mapToInt(n -> n).max();
-        System.out.println("max: "+max);
-
-        OptionalDouble average = numbers.stream().mapToDouble(n -> n).average();
-        System.out.println("average: "+average.getAsDouble());
-
-        long totalLong = numbers.stream().mapToLong(n -> n*1000).sum();
-        System.out.println(totalLong);
+//        int total = numbers.stream().mapToInt(n -> n).sum();
+//        System.out.println("total: "+total);
+//
+//        OptionalInt min = numbers.stream().mapToInt(n -> n).min();
+//        System.out.println("min: "+min);
+//
+//        OptionalInt max = numbers.stream().mapToInt(n -> n).max();
+//        System.out.println("max: "+max);
+//
+//        OptionalDouble average = numbers.stream().mapToDouble(n -> n).average();
+//        System.out.println("average: "+average.getAsDouble());
+//
+//        long totalLong = numbers.stream().mapToLong(n -> n*1000).sum();
+//        System.out.println(totalLong);
 
         /* Collect */
 
-        Map<Product, Long> countProducts = products.stream().collect(Collectors.groupingBy(
+        Map<Product, Long> countProducts = products.stream().collect(groupingBy(
                 Function.identity(),
                 Collectors.counting()
         ));
@@ -229,7 +231,7 @@ public class AllFunctionsOfJava {
         //System.out.println(countProducts + " ");
 
         Map<String, Long> countProd = products.stream().collect(
-                Collectors.groupingBy(
+                groupingBy(
                         Product::getName,
                         Collectors.counting()
                 )
@@ -238,7 +240,7 @@ public class AllFunctionsOfJava {
         // System.out.println(countProd);
 
         Map<String, Integer> groupByNameAndQuantity = products.stream().collect(
-                Collectors.groupingBy(
+                groupingBy(
                         Product::getName,
                         Collectors.summingInt(Product::getQuantity)
                 )
@@ -247,7 +249,7 @@ public class AllFunctionsOfJava {
         // System.out.println(groupByNameAndQuantity);
 
         Map<Integer, Set<String>> quantity = products.stream().collect(
-                Collectors.groupingBy(
+                groupingBy(
                         Product::getQuantity,
                         Collectors.mapping(Product::getName,
                                 Collectors.toSet())
@@ -255,5 +257,44 @@ public class AllFunctionsOfJava {
         );
 
         //System.out.println(quantity);
+
+        // Collectors.joining
+
+        String nameOfProducts = products
+                .stream()
+                .map(Product::getName)
+                .collect(Collectors.joining(", "));
+
+        System.out.println("Name of Products: "+nameOfProducts);
+
+        // Collectors.reducing
+
+//        String reducingNames1 = products
+//                .stream()
+//                .map(Product::getName)
+//                .collect(Collectors.reducing((s1,s2) -> s1+s2))
+//                .get();
+//
+//        System.out.println("Using Collectors.reducing: "+reducingNames1);
+//
+//        String reducingNames2 = products
+//                .stream()
+//                .collect(Collectors.reducing("Other Way of Names: ", Product::getName, (s1,s2) -> s1+s2));
+//
+//        System.out.println("Using Collectors.reducing with Identity: "+reducingNames2);
+
+        // Collectors.groupingBy
+
+//        Map<String, List<Product>> result = products
+//                .stream()
+//                .collect(groupingBy(Product::getManufacturer));
+//
+//        System.out.println(result);
+
+        Map<String, Map<String, List<Product>>> results = products
+                .stream()
+                .collect(groupingBy(Product::getManufacturer, groupingBy(Product::getName)));
+
+        System.out.println(results);
     }
 }
