@@ -1,11 +1,11 @@
-package Java8.LambdaExpression;
+package Java8;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ForEach {
     public static void main(String[] args) {
-        List<Product> products = new ArrayList();
+        List<Product> products = new ArrayList<>();
         products.add(new Product("p1", "mobile 1", 1000, 2, "Manufacturer 1"));
         products.add(new Product("p2", "mobile 2", 700, 4, "Manufacturer 1"));
         products.add(new Product("p3", "laptop 1", 1200, 6, "Manufacturer 2"));
