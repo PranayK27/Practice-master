@@ -1,4 +1,4 @@
-package practice.HackerRank.Collections;
+package interview.HackerRank.Collections;
 
 import java.io.*;
         import java.util.*;

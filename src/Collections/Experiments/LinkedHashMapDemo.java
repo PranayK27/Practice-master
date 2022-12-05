@@ -48,7 +48,7 @@ public class LinkedHashMapDemo {
         System.out.println(
                 "Contains value 'practice.geeks"
                         + "forgeeks.org'? "
-                        + lhm.containsValue("practice"
+                        + lhm.containsValue("interview"
                         + ".geeksforgeeks.org"));
 
         // Removing entry using remove() method

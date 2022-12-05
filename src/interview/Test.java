@@ -3,34 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practice;
-import java.util.Scanner;
+package interview;
+
 /**
  *
  * @author Pranay
  */
-public class Linear_Search {
-    public static void main(String args[])
-    {
+import java.util.Scanner;
+public class Test {
+    public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        int a[]={50,60,30,70,20,80,10,100,40,90};
         int n=sc.nextInt();
-        int f=0;
-        for(int i=0; i<a.length; i++)
+        int i, f=0;
+        for(i=2;i<n;i++)
         {
-            if(a[i]==n)
+            if(n%i==0)
             {
                 f=1;
                 break;
-            }
+            }              
         }
         if(f==1)
         {
-            System.out.println("Success");
+            System.out.println("Not Prime");
         }
         else
         {
-            System.out.println("Failure");
+            System.out.println("Prime");
         }
     }
+            
 }

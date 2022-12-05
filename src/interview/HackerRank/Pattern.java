@@ -1,4 +1,4 @@
-package practice.HackerRank;
+package interview.HackerRank;
 
 import java.util.Scanner;
 

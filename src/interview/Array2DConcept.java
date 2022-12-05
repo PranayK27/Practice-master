@@ -1,4 +1,4 @@
-package practice;
+package interview;
 
 public class Array2DConcept {
     public static void main(String args[]) {

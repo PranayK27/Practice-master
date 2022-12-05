@@ -12,7 +12,7 @@ public class SortedMapExample {
     {
         SortedMap<Integer, String> sm
                 = new TreeMap<Integer, String>();
-        sm.put(new Integer(2), "practice");
+        sm.put(new Integer(2), "interview");
         sm.put(new Integer(3), "quiz");
         sm.put(new Integer(5), "code");
         sm.put(new Integer(4), "contribute");
