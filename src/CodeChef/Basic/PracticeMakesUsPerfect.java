@@ -1,4 +1,4 @@
-package CodeChef.Arrays;
+package CodeChef.Basic;
 
 import java.util.Scanner;
 
