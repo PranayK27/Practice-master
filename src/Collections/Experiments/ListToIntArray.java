@@ -13,6 +13,7 @@ public class ListToIntArray {
 
         // Convert List into Array of integers like int[]
 
+        System.out.println("Printing the array:");
         int[] intArray = new int[list.size()];
         for (int i=0; i< list.size(); i++){
             intArray[i] = list.get(i);
