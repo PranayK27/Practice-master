@@ -1,4 +1,4 @@
-package CodeChef.Problems;
+package CodeChef.Problems.Strings;
 
 /*
 World Chess Championship
