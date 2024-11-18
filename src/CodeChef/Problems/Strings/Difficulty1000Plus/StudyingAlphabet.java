@@ -27,9 +27,13 @@ Each letter will appear in S no more than once.
 S, Wi consist only of lowercase Latin letters.
 
 ---Input---
-
+act
+2
+cat
+dog
 ---Output---
-
+Yes
+No
 **/
 
 import java.util.Scanner;
