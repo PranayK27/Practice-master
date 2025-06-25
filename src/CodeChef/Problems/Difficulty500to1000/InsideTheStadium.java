@@ -121,11 +121,8 @@ public class InsideTheStadium {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        int c = 0;
-        int total = 0;
         while (t--> 0) {
             int n= sc.nextInt();
-            int sum[] = new int[n];
             int arr[] = new int[n];
             for (int i = 0; i < n; i++)
             {
